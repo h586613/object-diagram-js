@@ -3,6 +3,7 @@ import ODModeler from "object-diagram-js/lib/Modeler";
 
 import emptyBoardXML from "../resources/emptyBoard.xml";
 import sampleBoardXML from "../resources/sampleBoard.xml";
+// TODO replace both with sample xml for state charts (SCXML)
 
 // modeler instance
 const modeler = new ODModeler({
@@ -41,6 +42,7 @@ const state = {
   fullScreen: false,
   keyboardHelp: false,
 };
+
 document
   .getElementById("js-toggle-fullscreen")
   .addEventListener("click", function () {
@@ -77,7 +79,7 @@ function openFile(file, callback) {
   if (!window.FileReader) {
     return window.alert(
       "Looks like you use an older browser that does not support drag and drop. " +
-        "Try using a modern browser such as Chrome, Firefox or Internet Explorer > 10.",
+        "Try using a modern browser such as Chrome, Firefox or Internet Explorer > 10."
     );
   }
 
@@ -136,7 +138,7 @@ function setEncoded(link, name, data) {
     link.classList.add("active");
     link.setAttribute(
       "href",
-      "data:application/xml;charset=UTF-8," + encodedData,
+      "data:application/xml;charset=UTF-8," + encodedData
     );
     link.setAttribute("download", name);
   } else {
